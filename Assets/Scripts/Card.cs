@@ -6,7 +6,7 @@ using TMPro;
 public class Card : MonoBehaviour
 {
     // Start is called before the first frame update
-    public TMP_Text cardName,cardText,Hobi,cardJob;
+    public TMP_Text cardName,cardText,cardJob;
     public Image cardImage;
     public CardManager cardManager;
     public int CardNo;
@@ -21,7 +21,7 @@ public class Card : MonoBehaviour
 
         cardText.text = Giving.cardInfo;
 
-        Hobi.text = Giving.cardHobi;
+       
 
         cardImage.sprite = Giving.CharacterFoto;
          
@@ -55,6 +55,9 @@ public class Card : MonoBehaviour
             else
             {
                 //sonuncu kartın şartları girilir
+                cardManager.level+=1;
+                cardManager.NewSahne();
+
             }
         }
         

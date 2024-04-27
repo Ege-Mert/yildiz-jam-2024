@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfa582e48387d94c8b201d2cb002f23, type: 3}
+  m_Name: baran can arvin
+  m_EditorClassIdentifier: 
+  CardNo: 12
+  cardName: 'Baran Can Arvin '
+  cardJob: Ressam
+  cardInfo: "Karakter A\xE7\u0131klamas\u0131: Kendisi k\xFC\xE7\xFCk \xE7apl\u0131
+    bir sergiye sahip manzara resimleri yapan br ressamd\u0131r. Haftasonlar\u0131
+    balkonuna ge\xE7ip kahve e\u015Fli\u011Finde purosunu i\xE7meyi ve kruvasan yemeyi
+    \xE7ok sever. Tam bir frans\u0131z \xF6zentisidir. \u0130nsanlarla aras\u0131
+    iyidir fakat sanat ile ilgilnmeyen insanlara \xFCstten bakar. Her sabah b\u0131y\u0131klar\u0131n\u0131
+    badem ya\u011F\u0131 ile besler. Yaz k\u0131\u015F boynundaki atk\u0131y\u0131
+    \xE7\u0131karmaz."
+  CharacterFoto: {fileID: 21300000, guid: bf7b5213a521e5f4a9f3b6a492a7824b, type: 3}

@@ -45,13 +45,13 @@ public class CardManager : MonoBehaviour
     {
           switch(level)
           {
-            case 1: Lenght = 2;break;
+            case 1: Lenght = Random.Range(1,4);break;
 
-            case 2: Lenght = 2;break;
+            case 2: Lenght = Random.Range(1,4);break;
 
-            case 3: Lenght = 3;break;
+            case 3: Lenght = Random.Range(1,4);break;
 
-            case 4: Lenght = 3;break;
+            case 4: Lenght = Random.Range(1,4);break;
 
           }
            
@@ -90,15 +90,51 @@ public class CardManager : MonoBehaviour
 
         case 5: card.Kart(Randomize[5]); break;
 
+        case 6: card.Kart(Randomize[6]); break;
+
+        case 7: card.Kart(Randomize[7]); break;
+
+        case 8: card.Kart(Randomize[8]); break;
+        
+        case 9: card.Kart(Randomize[9]); break;
+
+        case 10: card.Kart(Randomize[10]); break;
+    
+        case 11: card.Kart(Randomize[11]); break;
+
+        case 12: card.Kart(Randomize[12]); break;
+
+        case 13: card.Kart(Randomize[13]); break;
+
+        case 14: card.Kart(Randomize[14]); break;
+
+        case 15: card.Kart(Randomize[15]); break;
+        
+        case 16: card.Kart(Randomize[16]); break;
+
+        case 17: card.Kart(Randomize[17]); break;
+    
+        case 18: card.Kart(Randomize[18]); break;
+
+        case 19: card.Kart(Randomize[19]); break;
+
      }
 
 
     }
    
-   
+   public void NewSahne()
+   {
+    RandomizeRoundStarter();
+
+   }
    //Kartları rastgelekar Randomize yap
     public void RandomizeRoundStarter()
     {
+        cardcomingNum = 0;
+
+        Randomize.Clear();
+
        for (int i = 0; i <scriptableObj.Count; i++)
         {
              Scobj Rand = scriptableObj[Random.Range(0,scriptableObj.Count)];
@@ -114,6 +150,7 @@ public class CardManager : MonoBehaviour
             Randomize.Add(Rand);
             
     }
+     MissionTaker();
      IndexGoesToCard();
     }
     

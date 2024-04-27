@@ -15,7 +15,9 @@ MonoBehaviour:
   CardNo: 4
   cardName: "\u015Eeraffetin"
   cardJob: "uzayl\u0131"
-  cardInfo: "t440 adl\u0131 gezegenden gizli ajan olarak d\xFCnyay\u0131 inceleme
-    ekibninin ba\u015F\u0131d\u0131r."
-  cardHobi: "S\xFCrt\xFCnmek,Koltuk t\u0131rmalamak"
-  CharacterFoto: {fileID: 0}
+  cardInfo: "Kendisi sahibine \xE7ok ba\u011Fl\u0131 bir turunu kedi. Kendisi kedilik
+    yapmay\u0131 \xE7ok seviyor. Genel olarak yatak odas\u0131nda ve sahibinin bilgisiyar
+    klavyesinin \xFCst\xFCnde gezmeyi \xE7ok sever. Boynun alt\u0131ndan ve kuru\u011Funda
+    sevilmeyi sevmiyor. Perdelere kar\u015F\u0131 bir zaaf\u0131 var. Bazen ortadan
+    kayboluyor ve kimse o esnada nerede ne yapt\u0131\u011F\u0131n\u0131 bilmiyor. "
+  CharacterFoto: {fileID: 21300000, guid: 0505898b850f1834e9a32f15487824c1, type: 3}
