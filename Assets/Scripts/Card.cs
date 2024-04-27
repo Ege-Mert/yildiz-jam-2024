@@ -50,6 +50,7 @@ public class Card : MonoBehaviour
             if(CardManager.cardcomingNum < cardManager.Randomize.Count-1)
             {
                 StartCoroutine(nextCardAnimation());
+                cardManager.DeleteCard(CardNo);
             } 
             else
             {
