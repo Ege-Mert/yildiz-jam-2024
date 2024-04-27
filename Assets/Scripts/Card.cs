@@ -6,7 +6,7 @@ using TMPro;
 public class Card : MonoBehaviour
 {
     // Start is called before the first frame update
-    public TMP_Text cardName,cardText,Hobi;
+    public TMP_Text cardName,cardText,Hobi,cardJob;
     public Image cardImage;
     public CardManager cardManager;
     public int CardNo;
@@ -15,6 +15,8 @@ public class Card : MonoBehaviour
     //güncel şuanda seçim yaptığımız kartın bilgilerini aktif et 
     public void Kart(Scobj Giving)
     {
+        cardJob.text = Giving.cardJob;
+
         cardName.text = Giving.cardName;
 
         cardText.text = Giving.cardInfo;
