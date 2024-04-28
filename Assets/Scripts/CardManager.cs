@@ -4,15 +4,19 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.UIElements;
+using DG.Tweening;
+using UnityEngine.UI;
+using Unity.VisualScripting;
+
 public class CardManager : MonoBehaviour
 {
     public TMP_Text[] godSpeech;
+    public TMP_Text Gsodtext;
     public List<Scobj> scriptableObj;
     public List<Scobj> Randomize;
     public List<int> missionNums;  
     public int  level, Lenght, DeletedInt, CompleteInt, Wrong;
-
+    public Image GodScene;
      public bool NextRound;
     public Card card;
 
@@ -142,14 +146,43 @@ public class CardManager : MonoBehaviour
     if(CompleteInt==Lenght && Wrong<3)
     {
         //aferim
-        RandomizeRoundStarter();
+       StartCoroutine(GodWillCome());
     }
      else
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(GodWillBlameYou());
     }
     
 
+   }
+   IEnumerator GodWillCome()
+   {
+    GodScene.transform.DOScale(1,0.25f);
+    GodScene.transform.DORotate(new Vector3(0,0,360*4),0.5f,RotateMode.FastBeyond360);
+    card.Guncelle();
+    yield return new WaitForSeconds(2f);
+
+    Gsodtext.text="Aferim Öldürülmesi gerekenleri öldürmüşsün";
+    
+    GodScene.transform.DOScale(0,0.25f);
+    GodScene.transform.DORotate(new Vector3(0,0,-360*4),0.5f,RotateMode.FastBeyond360);
+    yield return new WaitForSeconds(0.5f);
+     RandomizeRoundStarter();
+   }
+   IEnumerator GodWillBlameYou()
+   {
+    GodScene.transform.DOScale(1,0.5f);
+    GodScene.transform.DORotate(new Vector3(0,0,360*4),0.5f,RotateMode.FastBeyond360);
+    yield return new WaitForSeconds(1f);
+
+    Gsodtext.text = "Bu ne rezaletdir böyle mi dedim ben !!";
+    yield return new WaitForSeconds(1f);
+    GodScene.transform.DOScale(0,0.5f);
+    GodScene.transform.DORotate(new Vector3(0,0,360*4),0.5f,RotateMode.FastBeyond360);
+    
+    yield return new WaitForSeconds(2f);
+
+      SceneManager.LoadScene(0);
    }
    //Kartları rastgelekar Randomize yap
     public void RandomizeRoundStarter()
@@ -177,6 +210,7 @@ public class CardManager : MonoBehaviour
     }
      MissionTaker();
      IndexGoesToCard();
+     card.Guncelle();
     }
     
 

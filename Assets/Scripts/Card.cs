@@ -23,6 +23,7 @@ public class Card : MonoBehaviour
     public void Kart(Scobj Giving)
     {
         // kart gerekli konuma gelir ve dönerek bunu yapar
+        
         this.transform.DOLocalMoveX(0,0.3f);
         this.transform.DORotate(new Vector3(0,0,360),0.3f,RotateMode.FastBeyond360);
         this.transform.DOScale(1,0.3f);
@@ -102,15 +103,19 @@ public class Card : MonoBehaviour
          
         
     }
-
+    public void Guncelle()
+    {
+           alo=CardManager.cardcomingNum;
+         NumText.text=(alo+1)+"/"+(cardManager.Randomize.Count);
+    }
     // kartı öldür ya da öldürme dediğimizde BirSonrakiKartıSeçme
     public void  nextCard()
 
     {
         cardManager.IndexGoesToCard();
          
-        alo=CardManager.cardcomingNum;
-        NumText.text=alo+"/"+(cardManager.Randomize.Count-1);
+        alo = CardManager.cardcomingNum;
+        NumText.text=(alo+1)+"/"+(cardManager.Randomize.Count);
 
     }
 }
