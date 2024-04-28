@@ -160,9 +160,11 @@ public class CardManager : MonoBehaviour
     GodScene.transform.DOScale(1,0.25f);
     GodScene.transform.DORotate(new Vector3(0,0,360*4),0.5f,RotateMode.FastBeyond360);
     card.Guncelle();
+     yield return new WaitForSeconds(1f);
+    Gsodtext.text="Aferim Öldürülmesi gerekenleri öldürmüşsün";
     yield return new WaitForSeconds(2f);
 
-    Gsodtext.text="Aferim Öldürülmesi gerekenleri öldürmüşsün";
+    
     
     GodScene.transform.DOScale(0,0.25f);
     GodScene.transform.DORotate(new Vector3(0,0,-360*4),0.5f,RotateMode.FastBeyond360);
@@ -173,14 +175,16 @@ public class CardManager : MonoBehaviour
    {
     GodScene.transform.DOScale(1,0.5f);
     GodScene.transform.DORotate(new Vector3(0,0,360*4),0.5f,RotateMode.FastBeyond360);
+    cardcomingNum = 0;
+    card.Guncelle();
     yield return new WaitForSeconds(1f);
 
     Gsodtext.text = "Bu ne rezaletdir böyle mi dedim ben !!";
     yield return new WaitForSeconds(1f);
     GodScene.transform.DOScale(0,0.5f);
-    GodScene.transform.DORotate(new Vector3(0,0,360*4),0.5f,RotateMode.FastBeyond360);
+    GodScene.transform.DORotate(new Vector3(0,0,360*4),0.1f,RotateMode.FastBeyond360);
     
-    yield return new WaitForSeconds(2f);
+    yield return new WaitForSeconds(0.2f);
 
       SceneManager.LoadScene(0);
    }
