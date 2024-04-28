@@ -15,10 +15,11 @@ MonoBehaviour:
   CardNo: 18
   cardName: Hakan
   cardJob: "M\xFChendislik"
-  cardInfo: "arakter A\xE7\u0131klamas\u0131:Hakan, enerji sekt\xF6r\xFCnde \xE7al\u0131\u015Fan
+  cardInfo: "karakter A\xE7\u0131klamas\u0131:Hakan, enerji sekt\xF6r\xFCnde \xE7al\u0131\u015Fan
     ba\u015Far\u0131l\u0131 bir m\xFChendis. G\xFCne\u015F enerjisi sistemleri \xFCzerinde
     uzmanla\u015Fm\u0131\u015F ve s\xFCrd\xFCr\xFClebilir enerjiye olan tutkusuyla
     biliniyor. Ayr\u0131ca do\u011Fada foto\u011Fraf \xE7ekmek favorisi akitvetisidir.
     Nadir ku\u015Flar\u0131n foto\u011Fraflarn\u0131 toplad\u0131\u011F\u0131 bir
     alb\xFCme sahip. G\xF6zl\xFC\u011F\xFC konusunda hassas."
+  Mininfo: "G\xFCne\u015Fi fazla kuracalama yakar\u0131m."
   CharacterFoto: {fileID: 21300000, guid: 333f7d859de298c44ade610c18e333fe, type: 3}

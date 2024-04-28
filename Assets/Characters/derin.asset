@@ -21,4 +21,5 @@ MonoBehaviour:
     besleme ve kimsenin dikkat etmedi\u011Fi apartman bah\xE7esindeki \xE7i\xE7eklere
     bak\u0131m\u0131 \xFCstlenmi\u015Fitir. Haftasonu erken uyand\u0131r\u0131lmay\u0131
     sevmez."
+  Mininfo: "Her \xE7i\xE7e\u011Fe dokunulmayaca\u011F\u0131n\u0131 \xF6\u011Frenmeliler."
   CharacterFoto: {fileID: 21300000, guid: 25286a88c14887f44bf478a9dc262584, type: 3}

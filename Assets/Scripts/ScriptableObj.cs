@@ -8,7 +8,7 @@ public class Scobj : ScriptableObject
 {
     // Start is called before the first frame update
     public int CardNo;
-    public String cardName, cardJob, cardInfo;
+    public String cardName, cardJob, cardInfo, Mininfo;
     public Sprite CharacterFoto;
     
 }

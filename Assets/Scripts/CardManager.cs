@@ -2,20 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UIElements;
 public class CardManager : MonoBehaviour
 {
-    
+    public TMP_Text[] godSpeech;
     public List<Scobj> scriptableObj;
     public List<Scobj> Randomize;
     public List<int> missionNums;  
-    public int  level, Lenght,DeletedInt;
+    public int  level, Lenght, DeletedInt, CompleteInt, Wrong;
 
-     
+     public bool NextRound;
     public Card card;
 
     //Kart sırası
     public static int cardcomingNum = 0;
+    public void CardControl(int cardNo)
+    {
+        bool isthere=false;
+        for(int i=0;i<missionNums.Count;i++)
+        {
+            if(cardNo==missionNums[i])
+            {
+                CompleteInt+=1;
+                isthere=true;
+            }
+           
+        }
+        if(!isthere)
+        {
+            Wrong+=1;
+        }
+    }
 
     public void Start()
     {
@@ -29,33 +48,48 @@ public class CardManager : MonoBehaviour
     }
     public void DeleteCard(int numOfCard)
     {
-        for(int i=0;i<scriptableObj.Count;i++)
+        if(scriptableObj.Count>1)
         {
-             if(numOfCard==scriptableObj[i].CardNo)
+              for(int i=0;i<scriptableObj.Count;i++)
+            {   
+             if(numOfCard == scriptableObj[i].CardNo)
              {
                 scriptableObj.RemoveAt(i);
                
              }
+            
+       
+            }
         }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
+      
         
        
        
     }
     public void MissionTaker()
     {
+          godSpeech[0].text = "";
+          godSpeech[1].text = "";
+          godSpeech[2].text = "";
+          missionNums.Clear();
           switch(level)
           {
-            case 1: Lenght = Random.Range(1,4);break;
+            case 1: Lenght = Random.Range(1,3);  ; break;
 
-            case 2: Lenght = Random.Range(1,4);break;
+            case 2:/*bir önceki görevin şartları olursa level 2 yi başlatsın yoksa  restart*/ Lenght = Random.Range(1,3); CompleteInt = Lenght;break;
 
-            case 3: Lenght = Random.Range(1,4);break;
+            case 3: Lenght = Random.Range(1,3); ; break;
+            case 4: Lenght = Random.Range(1,3); ; break;
 
-            case 4: Lenght = Random.Range(1,4);break;
+            case 5: SceneManager.LoadScene(0); cardcomingNum=0; break;
 
           }
            
-      
+
         for (int j =0; j < Lenght; j++)
         {
           Scobj Rand = scriptableObj[Random.Range(0,scriptableObj.Count)];
@@ -63,11 +97,15 @@ public class CardManager : MonoBehaviour
             while (missionNums.Contains(Rand.CardNo))
             {
                 Rand = scriptableObj[Random.Range(0,scriptableObj.Count)];
+                 
             }
             missionNums.Add(Rand.CardNo);
+            godSpeech[j].text = Rand.Mininfo;
           
          
         }
+        // not gelir
+        
            
    
     
@@ -76,62 +114,49 @@ public class CardManager : MonoBehaviour
     // guncel kartin bilgilerini aktif edecek scripte taşı
     public void IndexGoesToCard()
     {
-     switch(cardcomingNum)
-     {
-        case 0: card.Kart(Randomize[0]); break;
-
-        case 1: card.Kart(Randomize[1]); break;
         
-        case 2: card.Kart(Randomize[2]); break;
-
-        case 3: card.Kart(Randomize[3]); break;
-    
-        case 4: card.Kart(Randomize[4]); break;
-
-        case 5: card.Kart(Randomize[5]); break;
-
-        case 6: card.Kart(Randomize[6]); break;
-
-        case 7: card.Kart(Randomize[7]); break;
-
-        case 8: card.Kart(Randomize[8]); break;
         
-        case 9: card.Kart(Randomize[9]); break;
-
-        case 10: card.Kart(Randomize[10]); break;
-    
-        case 11: card.Kart(Randomize[11]); break;
-
-        case 12: card.Kart(Randomize[12]); break;
-
-        case 13: card.Kart(Randomize[13]); break;
-
-        case 14: card.Kart(Randomize[14]); break;
-
-        case 15: card.Kart(Randomize[15]); break;
         
-        case 16: card.Kart(Randomize[16]); break;
 
-        case 17: card.Kart(Randomize[17]); break;
-    
-        case 18: card.Kart(Randomize[18]); break;
+        if(cardcomingNum < Randomize.Count)
+        {
+         card.Kart(Randomize[cardcomingNum]);    
+        }
+        else
+        {
+            // günlük görev çıktıları
 
-        case 19: card.Kart(Randomize[19]); break;
-
-     }
-
-
+            NewSahne();
+        }
     }
+
    
+   // new sahne koşul bağlaması yapılıcak
    public void NewSahne()
    {
-    RandomizeRoundStarter();
+
+
+    //görev yanlış olursa
+   
+    //görev doğru olursa
+    if(CompleteInt==Lenght && Wrong<3)
+    {
+        //aferim
+        RandomizeRoundStarter();
+    }
+     else
+    {
+        SceneManager.LoadScene(0);
+    }
+    
 
    }
    //Kartları rastgelekar Randomize yap
     public void RandomizeRoundStarter()
     {
         cardcomingNum = 0;
+        CompleteInt=0;
+        Wrong=0;
 
         Randomize.Clear();
 
