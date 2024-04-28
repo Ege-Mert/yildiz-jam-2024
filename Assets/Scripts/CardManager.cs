@@ -84,14 +84,13 @@ public class CardManager : MonoBehaviour
           {
             case 1: Lenght = Random.Range(2,3);  ; break;
 
-            case 2:/*bir önceki görevin şartları olursa level 2 yi başlatsın yoksa  restart*/ Lenght = Random.Range(1,3); CompleteInt = Lenght;break;
+            case 2: Lenght = Random.Range(2,3); ;break;
 
             case 3: Lenght = Random.Range(2,3); ; break;
             case 4: Lenght = Random.Range(2,3); ; break;
             case 5: Lenght = Random.Range(2,3); ; break;
             case 6: Lenght = Random.Range(2,3); ; break;
-
-            case 7: SceneManager.LoadScene(1); cardcomingNum=0; break;
+            
 
           }
            
