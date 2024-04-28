@@ -11,7 +11,7 @@ public class Card : MonoBehaviour
     public TMP_Text cardName, cardText, cardJob, NumText;
     public Image cardImage, Hand;
     public int alo;
-    public AudioSource Sound;
+    public AudioSource Sound,sound2;
     public AudioClip[] Sfx;
      public AudioClip[] SfxNingen;
     public CardManager cardManager;
@@ -46,8 +46,9 @@ public class Card : MonoBehaviour
     }
     public IEnumerator Speech()
     {
-        yield return new WaitForSeconds(0.5f);
-        Sound.PlayOneShot(SfxNingen[Random.Range(0, SfxNingen.Length)]);
+        yield return new WaitForSeconds(0.2f);
+        sound2.PlayOneShot(SfxNingen[Random.Range(0, SfxNingen.Length)]);
+        
     }
     //karti yaşat
     public void Idle()
@@ -76,6 +77,7 @@ public class Card : MonoBehaviour
              Sound.PlayOneShot(Sfx[1]);
              StartCoroutine(nextCardAnimation());
              ButtonOpen=false;
+              sound2.Stop();
          // son kart ise basıldığında ekran kararır görevi yapabildik mi bakılır
         }
     }
@@ -89,6 +91,7 @@ public class Card : MonoBehaviour
             // öldürülen kart scriptableobj dizisinden  çıkarılır dizideki boşluk giderilir
             // öldürülen kartın görev olup olmadığı bakılır görevse int GörevSayac artar deilse yanılgı sayac artar
             // son kart ise basıldığında ekran kararır görevi yapabildik mi bakılır değilse nextCard CAGİRİLİR
+             sound2.Stop();
                  Sound.PlayOneShot(Sfx[1]);
                 cardManager.DeleteCard(CardNo);
                 cardManager.CardControl(CardNo);

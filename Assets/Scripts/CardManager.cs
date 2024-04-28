@@ -82,14 +82,16 @@ public class CardManager : MonoBehaviour
           missionNums.Clear();
           switch(level)
           {
-            case 1: Lenght = Random.Range(1,3);  ; break;
+            case 1: Lenght = Random.Range(2,3);  ; break;
 
             case 2:/*bir önceki görevin şartları olursa level 2 yi başlatsın yoksa  restart*/ Lenght = Random.Range(1,3); CompleteInt = Lenght;break;
 
-            case 3: Lenght = Random.Range(1,3); ; break;
-            case 4: Lenght = Random.Range(1,3); ; break;
+            case 3: Lenght = Random.Range(2,3); ; break;
+            case 4: Lenght = Random.Range(2,3); ; break;
+            case 5: Lenght = Random.Range(2,3); ; break;
+            case 6: Lenght = Random.Range(2,3); ; break;
 
-            case 5: SceneManager.LoadScene(0); cardcomingNum=0; break;
+            case 7: SceneManager.LoadScene(1); cardcomingNum=0; break;
 
           }
            
@@ -186,7 +188,7 @@ public class CardManager : MonoBehaviour
     
     yield return new WaitForSeconds(0.2f);
 
-      SceneManager.LoadScene(0);
+      SceneManager.LoadScene(1);
    }
    //Kartları rastgelekar Randomize yap
     public void RandomizeRoundStarter()
