@@ -15,7 +15,7 @@ public class CardManager : MonoBehaviour
     public List<Scobj> scriptableObj;
     public List<Scobj> Randomize;
     public List<int> missionNums;  
-    public int  level, Lenght, DeletedInt, CompleteInt, Wrong;
+    public int  level, Lenght, DeletedInt, CompleteInt, Wrong, WinCount;
     public Image GodScene;
      public bool NextRound;
     public Card card;
@@ -67,7 +67,16 @@ public class CardManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(0);
+            if(WinCount==8)
+            {
+                // kazanma koşulu
+                SceneManager.LoadScene(2);
+            }
+            else
+            {
+            StartCoroutine(GodWillBlameYou());
+            }
+            
         }
       
         
@@ -84,14 +93,13 @@ public class CardManager : MonoBehaviour
           {
             case 1: Lenght = Random.Range(2,3);  ; break;
 
-            case 2:/*bir önceki görevin şartları olursa level 2 yi başlatsın yoksa  restart*/ Lenght = Random.Range(1,3); CompleteInt = Lenght;break;
+            case 2: Lenght = Random.Range(2,3); ;break;
 
             case 3: Lenght = Random.Range(2,3); ; break;
             case 4: Lenght = Random.Range(2,3); ; break;
             case 5: Lenght = Random.Range(2,3); ; break;
             case 6: Lenght = Random.Range(2,3); ; break;
-
-            case 7: SceneManager.LoadScene(1); cardcomingNum=0; break;
+            
 
           }
            
@@ -145,7 +153,7 @@ public class CardManager : MonoBehaviour
     //görev yanlış olursa
    
     //görev doğru olursa
-    if(CompleteInt==Lenght && Wrong<3)
+    if(CompleteInt==Lenght && Wrong<1)
     {
         //aferim
        StartCoroutine(GodWillCome());
@@ -167,7 +175,7 @@ public class CardManager : MonoBehaviour
     yield return new WaitForSeconds(2f);
 
     
-    
+    WinCount+=1;
     GodScene.transform.DOScale(0,0.25f);
     GodScene.transform.DORotate(new Vector3(0,0,-360*4),0.5f,RotateMode.FastBeyond360);
     yield return new WaitForSeconds(0.5f);

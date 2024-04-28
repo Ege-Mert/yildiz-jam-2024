@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: bd8188eb557c8d1459862c5b246f1e2f
+  - enabled: 1
+    path: Assets/Scenes/AraSahne.unity
+    guid: 619b99c190e63484b82a8a9d3a31ac33
   m_configObjects: {}
