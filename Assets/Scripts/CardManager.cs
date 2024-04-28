@@ -171,7 +171,7 @@ public class CardManager : MonoBehaviour
     GodScene.transform.DORotate(new Vector3(0,0,360*4),0.5f,RotateMode.FastBeyond360);
     card.Guncelle();
      yield return new WaitForSeconds(1f);
-    Gsodtext.text="Aferim Öldürülmesi gerekenleri öldürmüşsün";
+    Gsodtext.text="Aferin Öldürülmesi gerekenleri öldürmüşsün";
     yield return new WaitForSeconds(2f);
 
     
