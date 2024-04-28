@@ -2394,10 +2394,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1753883903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 63, y: 50}
-  m_SizeDelta: {x: 305.2, y: 177.73}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 787, y: 347}
+  m_SizeDelta: {x: 305.19995, y: 177.72998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564227033
 MonoBehaviour:
@@ -2412,6 +2412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 5504890ffa345ce4da585585ea9d5694, type: 2}
+  Cre: {fileID: 0}
 --- !u!95 &1564227034
 Animator:
   serializedVersion: 5
