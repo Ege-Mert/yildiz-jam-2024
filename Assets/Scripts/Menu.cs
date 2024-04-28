@@ -1,21 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
- public void StartButton()
- {
-    SceneManager.LoadScene(1);
- }
+   public AudioMixer audioMixer;
+   public void StartButton(){
+      SceneManager.LoadScene(1);
+   }
+   public void BackToTheMenu(){
+      SceneManager.LoadScene(0);
+   }
    
-   public void Options()
-   {
-    
+   public void SetVolume(float volume){
+      audioMixer.SetFloat("volume", volume);
+   }
+      
+   
+   
+   public void QuitButton(){
+      Application.Quit();
    }
 }
