@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardNo: 1
   cardName: Hidataka Miyazaki
-  cardJob: serbest meslek
+  cardJob: "Sanat\xE7\u0131"
   cardInfo: "kendisi Light life oyunun  ba\u015F yap\u0131mc\u0131s\u0131."
-  cardHobi: insanlara mobing uygulamak
-  CharacterFoto: {fileID: 0}
+  Mininfo: "Hayat oyun de\u011Fildir \xF6\u011Frenmelisiniz."
+  CharacterFoto: {fileID: 21300000, guid: 5f53bea9334c23748a62610e849e8fe9, type: 3}

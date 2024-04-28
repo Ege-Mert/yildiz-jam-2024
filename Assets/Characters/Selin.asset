@@ -18,6 +18,5 @@ MonoBehaviour:
   cardInfo: "Selin doktor olmak isteyen 12 ya\u015F\u0131nda bir ortaokul \xE7ocu\u011Fu.
     Kendisine neden doktor olmak istedi\u011Fi soruldu\u011Funda ise. \u0130nsanlar\u0131
     legal bir \u015Fekilde kesebilmek i\xE7in cevab\u0131n\u0131 veriyor"
-  cardHobi: "\xC7amurdan pasta yapmak, Abisi bilgisayar oynamak isterken fi\u015Fi
-    \xE7ekmek"
-  CharacterFoto: {fileID: 0}
+  Mininfo: "Y\u0131lan\u0131n ba\u015F\u0131n\u0131 k\xFC\xE7\xFCkken ezmek laz\u0131m"
+  CharacterFoto: {fileID: 21300000, guid: 5579929adcabdba4e81bc4c7123ea120, type: 3}

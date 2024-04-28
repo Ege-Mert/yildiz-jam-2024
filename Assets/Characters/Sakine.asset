@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfa582e48387d94c8b201d2cb002f23, type: 3}
+  m_Name: Sakine
+  m_EditorClassIdentifier: 
+  CardNo: 10
+  cardName: Sakine
+  cardJob: "\xD6\u011Frenci "
+  cardInfo: "Karakter A\xE7\u0131klamas\u0131: Sakine gastornomi birinci s\u0131n\u0131f
+    \xF6\u011Frencisidir. Eli b\u0131\xE7a\u011Fa yatk\u0131nd\u0131r fakat so\u011Fan
+    g\xF6zlerini yakt\u0131\u011F\u0131 gerek\xE7esiyle so\u011Fan do\u011Framaz.
+    \u0130nsanlara her zaman iyi niyetle yakla\u015F\u0131r. Genellikle aldat\u0131l\u0131r.
+    Sakine genelde \xFCzg\xFCnd\xFCr."
+  Mininfo: "B\u0131\xE7akla oyun olmaz"
+  CharacterFoto: {fileID: 21300000, guid: 6190bd6feed34a344ae7b3903fa618e8, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfa582e48387d94c8b201d2cb002f23, type: 3}
+  m_Name: "G\xFCne\u015F"
+  m_EditorClassIdentifier: 
+  CardNo: 5
+  cardName: "G\xFCne\u015F"
+  cardJob: Avukat
+  cardInfo: "Karakter A\xE7\u0131klamas\u0131: Kendisi \xE7\xF6p\xE7atanl\u0131k
+    i\u015Flerini beceremedi\u011Fi i\xE7in bo\u015Fanma avukat\u0131 oldu. Bo\u015F
+    zamanlar\u0131nda arkada\u015Flar\u0131 ile bir cafede toplan\u0131p i\u015F
+    yerindeki insanlar\u0131n dedikodusnu yapmay\u0131 seviyor. Ne\u015Feli bir insand\u0131r.
+    En b\xFCy\xFCk hayali konya d\u0131\u015F\u0131nda bir \u015Fehir g\xF6rmek.
+    Heryerde hukuk okudu\u011Funu s\xF6yl\xFCyor."
+  Mininfo: "Yuva y\u0131kan\u0131n benim mezrebinde yeri yoktur."
+  CharacterFoto: {fileID: 21300000, guid: 892621be488c4954581e319a7bb84a66, type: 3}
